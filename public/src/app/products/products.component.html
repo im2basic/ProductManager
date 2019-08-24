@@ -1,0 +1,17 @@
+<h3>Products List</h3>
+
+<div *ngFor="let product of allProducts" >
+    <img src= {{product.imageUrl}} alt="err" class="image">
+    <p>Title: {{ product.title }}</p>
+    <p>Price: {{ product.price }}</p>
+    <button [routerLink]="['/products/edit', product._id]" >Edit</button>
+    <button (click)="deleteOne(product._id)">Delete</button>
+    <button (click)="review()">Review</button>
+</div>
+    <div *ngIf="newReview">
+        <form (submit)="createReview(product._id)">
+            
+            <input type="number" name="newReview.rating" [(ngModel)]="newReview.rating">
+            <input type="text" name="newReview.comment" [(ngModel)]="newReview.comment">
+        </form>
+    </div>

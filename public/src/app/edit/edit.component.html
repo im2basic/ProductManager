@@ -1,0 +1,14 @@
+<form (submit)="editProduct()">
+
+    <label>Title:</label>
+    <input class="form-control" type="text" name="updateProduct.title" [(ngModel)]="updateProduct.title" value="updateProduct.title"><br>
+    
+    <label>Price:</label>
+    <input class="form-control" type="number" name="updateProduct.price" [(ngModel)]="updateProduct.price" value="updateProduct.price"><br>
+  
+    <label>Image URL:</label>
+    <input class="form-control" type="text" name="updateProduct.imageUrl" [(ngModel)]="updateProduct.imageUrl" value="updateProduct.imageUrl"><br>
+    
+    <input class="form-control" type="submit" value="SUBMIT">
+    <button class="btn btn-danger" [routerLink]="['/products']">CANCEL</button>
+</form>

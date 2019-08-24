@@ -1,0 +1,17 @@
+body {
+    background-color: #363636;
+    color: white;
+    margin: 20px;
+}
+
+nav {
+    margin-right: 10%;
+}
+
+form {
+    width: 30%;
+}
+
+.image {
+    width: 30%;
+}

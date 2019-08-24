@@ -1,0 +1,18 @@
+<div *ngFor="let err of errors">
+  <p style="color: red;">{{ err }}</p>
+</div>
+
+<form (submit)="createProduct()">
+
+  <label>Title:</label>
+  <input class="form-control" type="text" name="newProduct.title" [(ngModel)]="newProduct.title"><br>
+  
+  <label>Price:</label>
+  <input class="form-control" type="number" name="newProduct.price" [(ngModel)]="newProduct.price"><br>
+
+  <label>Image URL:</label>
+  <input class="form-control" type="text" name="newProduct.imageUrl" [(ngModel)]="newProduct.imageUrl"><br>
+  
+  <input class="form-control" type="submit" value="SUBMIT">
+  <button class="btn btn-danger" [routerLink]="['/products']">CANCEL</button>
+</form>
